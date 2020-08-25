@@ -60,7 +60,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Style="{StaticResource FloatActionButton}" TranslationY="-30"/>
+                    <Button Style="{StaticResource FloatActionButton}" TranslationY="-30" Clicked="ShowAddPage"/>
                 </Grid>
             </Frame>
         

@@ -9,13 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace MyTasksXF.View {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage {
-        public HomePage() {
+    public partial class AddTaskPage : ContentPage {
+        public AddTaskPage() {
             InitializeComponent();
         }
 
-        private void ShowAddPage(object sender, EventArgs e) {
-            Navigation.PushModalAsync(new AddTaskPage());
+        private void CloseModal(object sender, EventArgs e) {
+            Navigation.PopModalAsync();
         }
     }
 }

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyTasksXF.View.AddTaskPage"
+             BackgroundColor="Transparent">
+    <ContentPage.Content>
+        <Frame BackgroundColor="{StaticResource background}" CornerRadius="10" Margin="20, 40, 20, 20">
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label HorizontalOptions="FillAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="New" FontFamily="RobotoRegular" FontSize="16"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="Task" FontFamily="RobotoBold" FontSize="30"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="x" Padding="20, 0, 10, 20" FontSize="30" VerticalTextAlignment="Start">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="CloseModal"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Frame Padding="10" CornerRadius="0">
+                    <DatePicker />
+                </Frame>
+
+                <Frame Padding="10" CornerRadius="0">
+                    <TimePicker/>
+                </Frame>
+
+                <Frame Padding="10" CornerRadius="0">
+                    <TimePicker/>
+                </Frame>
+
+                <Frame Padding="10" CornerRadius="0">
+                    <Entry Placeholder="Task"/>
+                </Frame>
+                
+                <Frame Padding="10" CornerRadius="0">
+                    <Editor Placeholder="Note" AutoSize="TextChanges"/>
+                </Frame>
+                
+                <Button Text="Add" 
+                        BackgroundColor="{StaticResource primaryColor}" 
+                        TextColor="White" FontFamily="RobotoBold"
+                        HorizontalOptions="End"
+                        VerticalOptions="EndAndExpand"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
