@@ -56,7 +56,12 @@
             </Grid>
             
             <Frame Grid.Row="1" HasShadow="False" CornerRadius="30" TranslationY="30">
-                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Style="{StaticResource FloatActionButton}" TranslationY="-30"/>
+                </Grid>
             </Frame>
         
         </Grid>
